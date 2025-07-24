@@ -10,7 +10,9 @@ jobs:
     steps:
       - run: |
           echo "👋 Hello World!"
-          echo "::warning::{My debug}"
+          echo "::debug::{My debug}"
+          echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+          echo "::error file=app.js,line=1,col=5,endColumn=7::Error in app.js"
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: List files in repository
