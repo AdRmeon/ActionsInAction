@@ -10,7 +10,7 @@ jobs:
     steps:
       - run: |
           echo "👋 Hello World!"
-          echo "::warning file={name},line={line},endLine={el},title={title}::{message}"
+          echo "::debug::My debug"
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: List files in repository
