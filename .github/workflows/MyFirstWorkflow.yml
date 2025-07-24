@@ -8,7 +8,9 @@ jobs:
   MyFirstJob:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "👋 Hello World!"
+      - run: |
+          echo "👋 Hello World!"
+          ::warning file={name},line={line},endLine={el},title={title}::{message}
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: List files in repository
