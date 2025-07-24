@@ -7,10 +7,12 @@ on:
 jobs:
   MyFirstJob:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_STEP_DEBUG: true
     steps:
       - run: |
           echo "👋 Hello World!"
-          echo "::debug::${{ env.ACTIONS_STEP_DEBUG }}"
+          echo "::debug::{ $ACTIONS_STEP_DEBUG }"
           echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
           echo "::error file=app.js,line=1,col=5,endColumn=7::Error in app.js"
       - name: Checkout
