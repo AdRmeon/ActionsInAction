@@ -16,7 +16,7 @@ jobs:
           echo "👋 Hello World!"
           echo "::debug::Input env is:${{ inputs.environment }}"
           echo "::debug::${{ vars.MYVAR }}"
-          echo "::debug::${{ env.MYREPVAR }}"
+          echo "::debug::${{ vars.MYREPVAR }}"
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: List files in repository
