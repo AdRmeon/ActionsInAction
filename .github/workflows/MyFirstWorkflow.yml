@@ -5,7 +5,9 @@ on:
   workflow_dispatch:
 jobs:
   MyFirstJob:
-    environment: MyEnv
+    environment:
+      name: MyEnv
+      url: https://github.com
     runs-on: ubuntu-latest
     steps:
       - run: |
