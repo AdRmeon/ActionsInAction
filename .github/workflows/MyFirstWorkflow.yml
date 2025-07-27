@@ -12,7 +12,7 @@ jobs:
     steps:
       - run: |
           echo "👋 Hello World!"
-          echo "::debug::${{ env.MYVAR }}"
+          echo "::debug::${{ MyEnv.MYVAR }}"
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: List files in repository
