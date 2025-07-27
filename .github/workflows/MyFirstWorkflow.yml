@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   MyFirstJob:
+    environment: MyEnv
     runs-on: ubuntu-latest
     steps:
       - run: |
