@@ -5,14 +5,12 @@ on:
   workflow_dispatch:
 jobs:
   MyFirstJob:
-    environment:
-      name: MyEnv
-      url: https://github.com
+    environment: ${{ inputs.environment }}
     runs-on: ubuntu-latest
     steps:
       - run: |
           echo "👋 Hello World!"
-          echo "::debug::${{ MyEnv.MYVAR }}"
+          echo "::debug::${{ vars.MYVAR }}"
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: List files in repository
